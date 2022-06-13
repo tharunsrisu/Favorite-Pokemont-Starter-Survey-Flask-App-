@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Survey {% endblock %}
+
+{% block content %}
+
+
+<ol>
+    {% for roll in rolls %}
+      <li> {{roll}} </li>
+    {% endfor %}
+  </ol>
+
+
+  <div>
+    <ul>
+        {% for poll in polls %}
+          <li> {{poll}} </li>
+        {% endfor %}
+      </ul>
+</div>
+
+{% endblock %}

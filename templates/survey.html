@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %} Survey {% endblock %}
+
+{% block content %}
+<!-- I borrrowed code from Pure CSS website that was linked in our assignment's page -->
+<div class="pure-form" id="div1">
+  <div>
+  <h1>Pokemon Interest Survey</h1>
+  </div>
+  <div>
+  <form class="pure-form pure-form-stacked" action="{{ url_for("thanks") }}" method="POST">
+    <fieldset>
+        <legend>Select Your Favorite Pokemon Starter from Gen 1-3</legend>
+        <label for="name">Favorite Starter Pokemon*</label>
+        <input type="name" id="name" pattern="[A-Za-z ]+" minlength="3" maxlength="50" required="required" name="name" />
+        <label for="stacked-state">Select Starter Pokemon Type</label>
+        <select id="stacked-state" name="type">
+          <option value="No Selected Type" Selected></option>
+            <option value="Fire">Fire</option>
+            <option value="Water">Water</option>
+            <option value= "Grass">Grass</option>
+        </select>
+      <p>Which region is this starter pokemon from?*</p>
+      <label for="radio1" class="pure-radio">
+          <input type="radio" id="radio1" name="optionsRadios" value="Kanto" required="required" />Kanto
+      </label>
+      <label for="radio2" class="pure-radio">
+          <input type="radio" id="radio2" name="optionsRadios" value="Jhoto" /> Jhoto
+      </label>
+      <label for="radio2" class="pure-radio">
+        <input type="radio" id="radio2" name="optionsRadios" value="Hoenn" /> Hoenn
+    </label>
+
+      <p>Is this starter from Kanto Region? Check the box if Yes and tell us why this starter is your favorite.</p>
+        <label for="stacked-remember" class="pure-checkbox">
+            <input type="checkbox" id="stacked-remember" onchange="toggleCheckbox(this)" /> <!-- Referece code from stack overflow and w3schools -->
+        </label>
+        <textarea id="kanto1" name="kanto11" rows="4" cols="50" pattern="[A-Za-z ]+" maxlength="200">
+          </textarea>
+        
+          <button type="submit" class="pure-button pure-button-primary">Next</button>
+    </fieldset>
+</form>
+</div>
+
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

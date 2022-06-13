@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Survey {% endblock %}
+
+{% block content %}
+
+<div id="div1">
+  <h1>This Survey gather information about your Favorite Pokemon Starter.</h1>
+  <h1>Would you like to give us your consent to collect information from your responses? By clicking consent, you are able to take the survey.</h1>
+  <div class="pure-button-group" role="group" aria-label="...">
+      <button class="pure-button" onclick="window.location.href ='survey'">Consent</button> <!-- I referenced Stack overflow for onclick code -->
+      <button class="pure-button" onclick="window.location.href ='decline'">Decline</button>
+  </div>
+
+  </div>
+
+{% endblock %}
